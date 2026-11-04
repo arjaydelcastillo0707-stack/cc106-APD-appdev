@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+</head>
+<body>
+    <h1>Student Registration</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="student_id">Student ID</label>
+        <input id="student_id" name="student_id" type="text" required>
+
+        <label for="first_name">First name</label>
+        <input id="first_name" name="first_name" type="text" required>
+
+        <label for="last_name">Last name</label>
+        <input id="last_name" name="last_name" type="text" required>
+
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender" required>
+            <option value="">Select gender</option>
+            <option value="MALE">Male</option>
+            <option value="FEMALE">Female</option>
+        </select>
+
+        <label for="date_of_birth">Date of birth</label>
+        <input id="date_of_birth" name="date_of_birth" type="date" required>
+
+        <label for="contact_number">Contact number</label>
+        <input id="contact_number" name="contact_number" type="tel" required>
+
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>
